@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Cover Image with Parallax Effect -->
+        <ImageView
+            android:id="@+id/coverImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/manga_cover_height"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/manga_cover"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_manga_placeholder" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_padding"
+            app:cardCornerRadius="@dimen/corner_radius_medium"
+            app:cardElevation="@dimen/elevation_low"
+            app:layout_constraintTop_toBottomOf="@id/coverImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/default_padding">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/titleText"
+                    style="@style/TextAppearance.MaterialComponents.Headline5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="One Piece" />
+
+                <!-- Status and Rating -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/small_padding"
+                    app:layout_constraintTop_toBottomOf="@id/titleText">
+
+                    <TextView
+                        android:id="@+id/statusText"
+                        style="@style/TextAppearance.MaterialComponents.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_status_tag"
+                        android:paddingHorizontal="@dimen/small_padding"
+                        android:textColor="@color/white"
+                        tools:text="Ongoing" />
+
+                    <TextView
+                        android:id="@+id/ratingText"
+                        style="@style/TextAppearance.MaterialComponents.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/small_padding"
+                        android:textColor="@color/text_secondary"
+                        tools:text="Rating: 4.8" />
+                </LinearLayout>
+
+                <!-- Chapter Count -->
+                <TextView
+                    android:id="@+id/chapterCountText"
+                    style="@style/TextAppearance.MaterialComponents.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_padding"
+                    android:textColor="@color/text_secondary"
+                    app:layout_constraintTop_toBottomOf="@id/statusText"
+                    tools:text="Chapters: 1045" />
+
+                <!-- Genres -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_padding"
+                    android:text="@string/genres"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    app:layout_constraintTop_toBottomOf="@id/chapterCountText" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/genreRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_padding"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/chapterCountText"
+                    tools:listitem="@layout/item_genre" />
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/descriptionText"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_padding"
+                    android:textColor="@color/text_secondary"
+                    app:layout_constraintTop_toBottomOf="@id/genreRecyclerView"
+                    tools:text="A long description about the manga..." />
+
+                <!-- Action Buttons -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/readButton"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_padding"
+                    android:text="@string/read_now"
+                    app:layout_constraintEnd_toStartOf="@id/favoriteButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/descriptionText" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/favoriteButton"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small_padding"
+                    android:layout_marginTop="@dimen/default_padding"
+                    android:text="@string/add_to_library"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/readButton"
+                    app:layout_constraintTop_toBottomOf="@id/descriptionText" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
