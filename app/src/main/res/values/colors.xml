@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- Status colors -->
+    <color name="ongoing">#FF4CAF50</color>
+    <color name="completed">#FF2196F3</color>
+    <color name="hiatus">#FFFF9800</color>
+    <color name="cancelled">#FFF44336</color>
+
+    <!-- Text colors -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="text_primary">#DE000000</color>
+    <color name="text_secondary">#8A000000</color>
+
+    <!-- Background colors -->
+    <color name="background_light">#FFF5F5F5</color>
+    <color name="background_dark">#FF121212</color>
+    <color name="surface_light">#FFFFFFFF</color>
+    <color name="surface_dark">#FF1E1E1E</color>
+
+    <!-- Chapter viewer -->
+    <color name="viewer_background">#FF000000</color>
+    <color name="viewer_controls">#B3FFFFFF</color>
+</resources>
