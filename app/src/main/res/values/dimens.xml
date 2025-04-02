@@ -1,0 +1,29 @@
+<resources>
+    <!-- Spacing -->
+    <dimen name="grid_spacing">8dp</dimen>
+    <dimen name="grid_spacing_half">4dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="large_padding">24dp</dimen>
+
+    <!-- Text sizes -->
+    <dimen name="text_large">18sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="text_xsmall">12sp</dimen>
+
+    <!-- Image sizes -->
+    <dimen name="cover_image_height">180dp</dimen>
+    <dimen name="cover_image_width">120dp</dimen>
+    <dimen name="avatar_size">48dp</dimen>
+
+    <!-- Corner radius -->
+    <dimen name="corner_radius_small">4dp</dimen>
+    <dimen name="corner_radius_medium">8dp</dimen>
+    <dimen name="corner_radius_large">16dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_low">2dp</dimen>
+    <dimen name="elevation_medium">4dp</dimen>
+    <dimen name="elevation_high">8dp</dimen>
+</resources>
